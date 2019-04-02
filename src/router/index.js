@@ -8,7 +8,6 @@ import pageroutes from './page';
 import Post from '../pages/Post';
 import Gallery from '../pages/Gallery';
 import Allpost from '../pages/Allpost';
-import iView from 'iview';
 Vue.use(Router);
 const routerConfig = new Router({
   routes: [
@@ -49,22 +48,9 @@ const routerConfig = new Router({
 });
 routerConfig.mode = history;
 routerConfig.beforeEach((to, from, next) => {
-  iView
-    .Spin
-    .show();
-  iView
-    .LoadingBar
-    .start();
   next();
 });
 routerConfig.afterEach(() => {
-  // 页面回到顶部
-  iView
-    .Spin
-    .hide();
-  iView
-    .LoadingBar
-    .finish();
   window.scrollTo(0, 0);
 });
 export default routerConfig;
