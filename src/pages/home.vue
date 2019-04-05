@@ -54,9 +54,7 @@ export default {
       photoLatest: photoData
     };
   },
-  components: {
-    PostList: () => import("../components/PostList")
-  },
+  components: {},
   computed: {
     year() {
       return new Date().getFullYear();

@@ -10,9 +10,7 @@
         </li>
       </ul>
     </div>
-    <div class="tag_page_post_list">
-      <PostList v-bind:defaultTag="this.selectedTag" />
-    </div>
+
   </div>
 </template>
 
@@ -29,7 +27,6 @@ export default {
     };
   },
   components: {
-    PostList: () => import("../components/PostList")
   },
   methods: {
     select: function(tag) {
